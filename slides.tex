@@ -213,5 +213,37 @@
     \end{itemize}
 \end{frame}
 
+
+\begin{frame}{Coherency Sensitive Hashing}
+    \begin{itemize}
+        \item A simple introduction
+        \item Find ANN for local patches
+        \item Naive baseline: brute-force match in the feature space
+        \item PatchMatch: like Genetic Algorithm
+        \begin{itemize}
+            \item Hold a candidate pool
+            \item If two patches in two images are similar, include nearby patches in the pool
+            \item Randomly add patch pairs in the pool to get rid of (too) local minima.
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Approach}
+    \begin{itemize}
+        \item Hashing + more sophisticated candidate expansion
+        \begin{itemize}
+            \item Hashing: LSH + 2D Walsh Hadamard Kernel
+            \item Candidate expansion
+            \begin{itemize}
+                \item $g_A(a) = g_B(b) \Rightarrow $ include $b$ in Cand($a$)
+                \item $b \in \text{Cand}(a_1), g_A(a_1) = g_A(a_2) \Rightarrow$ include $b$ in Cand($a_2$)
+                \item $b_1 \in \text{Cand}(a_2), g_B(b_1) = g_B(b_2) \Rightarrow$ include $b_2$ in Cand($a_2$)
+                \item Include spatial neighbor pairs in the candidates
+            \end{itemize}
+            \item Still need to do verifications on the candidate set
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
 \end{document}
 
