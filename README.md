@@ -4,4 +4,4 @@
  * R. Tron and R. Vidal, "Distributed Computer Vision Algorithms Through Distributed Averaging," In IEEE Conference on Computer Vision and Pattern Recognition, 2011.
 
  We'll also spend several minutes on an interesting paper:
-  * Simon Korman, Shai Avidan, "Coherency Sensitive Hashing,"  CCV 2011, Barcelona
+  * Simon Korman, Shai Avidan, "Coherency Sensitive Hashing," ICCV 2011, Barcelona
